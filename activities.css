@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    border: 2px solid #000; /* Add a thick border here */
+    padding: 10px; /* Add padding for spacing */
 }
 
 .draggable {

@@ -1,67 +1,77 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
-  <meta name="description" content="Describes activities at Pacific Trails Resort. There are multiple options available which can be added to the field below">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pacific Trails Resort :: Yurts</title>
-  <link rel="stylesheet" href="activities.css">
-  
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-  
-  <!-- Completed files -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacific Trails Resort</title>
+    <link rel="stylesheet" href="activities.css">
 </head>
-
 <body>
-  <div id="wrapper">
-    <header>
-      <h1>Pacific Trails Resort</h1>
-    </header>
+<header>
+    <h1>Pacific Trails Resort</h1>
+</header>
 
-    <nav>
-      <ul>
+<nav>
+    <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="yurts.html">Yurts</a></li>
         <li><a href="activities.html">Activities</a></li>
         <li><a href="reservations.html">Reservations</a></li>
-      </ul>
-    </nav>
+    </ul>
+</nav>
 
-    <div id="trailhero"></div>
-
-    <main>
-      <h2>Activities at Pacific Trails Resort</h2>
-
-      <h3>Hiking</h3>
-      <p><span class="resort">Pacific Trails Resort</span> has 5 miles of hiking trails and is adjacent to a state park. Go it alone or join one of our guided hikes.</p>
-
-      <h3>Kayaking</h3>
-      <p>Ocean kayaks are available for guest use.</p>
-
-      <h3>Bird Watching</h3>
-      <p>While anytime is a good time for bird watching at Pacific Trails, we offer guided birdwatching trips at sunrise several times a week.</p>
-    </main>
+<main>
+    <h2>Activities at Pacific Trails Resort</h2>
 
     <section>
-      <div class="container">
-        <div id="item1" class="draggable" draggable="true" data-value="10">Item 1 (Value: 10)</div>
-        <div id="item2" class="draggable" draggable="true" data-value="20">Item 2 (Value: 20)</div>
-        <div id="item3" class="draggable" draggable="true" data-value="30">Item 3 (Value: 30)</div>
-      </div>
-      <div class="container">
-        <div id="target-container" class="droppable">
-          Drop items here
+        <h3>Hiking</h3>
+        <p><span class="resort">Pacific Trails Resort</span> has 5 miles of hiking trails and is adjacent to a state
+            park. Go it alone or join one of our guided hikes. Access to trails is free, but please sign up below.</p>
+    </section>
+
+    <section>
+        <h3>Kayaking</h3>
+        <p>Ocean kayaks are available for guest use. You can rent one for an additional fee, but it will be guaranteed
+            to
+            be available</p>
+    </section>
+
+    <section>
+        <h3>Bird Watching</h3>
+        <p>While anytime is a good time for bird watching at Pacific Trails, we offer guided birdwatching trips at
+            sunrise several times a week. Sign up below!</p>
+    </section>
+</main>
+
+<section>
+    <h3>Choices</h3>
+    <div class="container">
+        <div id="top-container" class="droppable">
+            Select From:
+
+            <div id="item1" class="draggable" draggable="true" data-name="Hiking" data-cost="0">Hiking (Additional Cost:
+                $0)
+            </div>
+            <div id="item2" class="draggable" draggable="true" data-name="Kayaking" data-cost="20">Kayaking (Additional
+                Cost: $20)
+            </div>
+            <div id="item3" class="draggable" draggable="true" data-name="Bird Watching" data-cost="0">Bird Watching
+                (Additional Cost: $0)
+            </div>
         </div>
-        <div id="total">Total: 0</div>
-      </div>
-      <script src="activities.js"></script>
-    </section>>
-    <footer>
-      Copyright © 2016 Pacific Trails Resort<br>
-      <a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a>
-    </footer>
-  </div>
+    </div>
+    <div class="container">
+        <div id="bottom-container" class="droppable">
+            Add choices below
+        </div>
+        <div id="total">Total Cost: 0</div>
+    </div>
+    <script src="activities.js"></script>
+</section>
+
+<footer>
+    Copyright © 2016 Pacific Trails Resort<br>
+    <a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a>
+</footer>
 </body>
 </html>

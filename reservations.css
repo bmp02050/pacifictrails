@@ -1,0 +1,27 @@
+/* Style for labels */
+label {
+    display: block;
+    margin-bottom: 5px; /* Add some spacing between labels and inputs */
+}
+
+/* Style for inputs and textareas */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+textarea {
+    width: 100%; /* Make inputs and textareas fill the entire width */
+    padding: 5px; /* Add some padding for better appearance */
+    margin-bottom: 10px; /* Add spacing between inputs */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}

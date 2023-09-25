@@ -55,7 +55,28 @@ function updateTotal() {
     });
     totalElement.textContent = `Total Cost: $${currentTotal}`;
 }
+
 function handleDrop(target, otherContainer, jsonData) {
+    // Check if the target and otherContainer are the same
+    if (target === otherContainer) {
+        return;
+    }
+
+    let exists = false;
+    const children = target.children;
+
+    for (let i = 0; i < children.length; i++) {
+        const child = children[i];
+        // Perform actions on each child element here
+        if (child.id === jsonData.id) {
+            exists = true;
+            break;
+        }
+    }
+    
+    if (exists)
+        return;
+    
     const newItem = document.createElement('div');
     newItem.id = jsonData.id;
     newItem.className = "draggable";
@@ -73,24 +94,24 @@ function handleDrop(target, otherContainer, jsonData) {
         e.dataTransfer.setData('application/json', JSON.stringify(itemData));
     });
 
+
     target.appendChild(newItem);
 
     totalElement.textContent = `Total Cost: ${currentTotal}`;
 
-    if (target !== otherContainer) {
-        const draggedItemId = jsonData.id;
-        const otherItems = otherContainer.querySelectorAll('.draggable');
-        let draggedItem;
+    const draggedItemId = jsonData.id;
+    const otherItems = otherContainer.querySelectorAll('.draggable');
+    let draggedItem;
 
-        otherItems.forEach(item => {
-            if (item.id === draggedItemId) {
-                draggedItem = item;
-            }
-        });
-
-        if (draggedItem && target !== otherContainer) {
-            draggedItem.remove();
+    otherItems.forEach(item => {
+        if (item.id === draggedItemId) {
+            draggedItem = item;
         }
-        updateTotal();
+    });
+
+    if (draggedItem && target !== otherContainer) {
+        draggedItem.remove();
     }
+    updateTotal();
 }
+

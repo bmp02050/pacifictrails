@@ -1,17 +1,44 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the main content section */
+main {
+    padding: 20px;
+}
+
+/* Style the sections within the main content */
+section {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #F7F7F7;
+    border: 1px solid #DDD;
+}
+
+/* Style the choices section */
 .container {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border: 2px solid #000; /* Add a thick border here */
-    padding: 10px; /* Add padding for spacing */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #DDD;
+    margin: 10px 0;
+}
+
+.droppable {
+    border: 2px dashed #007ACC;
+    padding: 10px;
+    min-height: 100px;
 }
 
 .draggable {
-    padding: 10px;
-    background-color: #f2f2f2;
-    cursor: pointer;
+    cursor: grab;
 }
 
 #total {
     font-weight: bold;
 }
+
+
